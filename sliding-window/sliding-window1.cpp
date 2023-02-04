@@ -26,12 +26,33 @@ int findMax(int arr[], int n, int k)
     return max_sum;
 }
 
+// for minimum sum of k size subarray
+// we will do the same thing but we will compare the window sum with the min sum
+// and we will update the min sum if the window sum is less than the min sum
+
+int findMin(int arr[], int n, int k)
+{
+    int min_sum = 0;
+    for (int i = 0; i < k; i++)
+    {
+        min_sum += arr[i];
+    }
+    int window_sum = min_sum;
+    for (int i = k; i < n; i++)
+    {
+        window_sum += arr[i] - arr[i - k];
+        min_sum = min(min_sum, window_sum);
+    }
+    return min_sum;
+}
+
 int main()
 {
     int arr[] = {1, 2, 3, 4, 5, 6, 7, 8};
     int n = sizeof(arr) / sizeof(arr[0]);
     int k = 3;
-    cout << findMax(arr, n, k);
+    cout << "maximum sum : " << findMax(arr, n, k) << endl;
+    cout << "minimum sum : " << findMin(arr, n, k) << endl;
 
     return 0;
 }
