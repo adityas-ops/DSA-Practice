@@ -19,21 +19,37 @@ vector<int>solve(string s, string p){
   if(p.length() > s.length()){
     return ans;
   }
+  map<char, int>mp1;
+  map<char, int>mp2;
+  for(int i = 0; i < p.length(); i++){
+    mp1[p[i]]++;
+    mp2[s[i]]++;
+  }
+  if(mp1 == mp2){
+    ans.push_back(0);
+  }
+  for(int i =1; i<s.length();i++){
+    mp2[s[i-1]]--;
+    if(mp2[s[i-1]] == 0){
+      mp2.erase(s[i-1]);
+    }
+    mp2[s[i+p.length()-1]]++;
+    if(mp1 == mp2){
+      ans.push_back(i);
+    }
+  }
+  return ans;
  
 }
 
 int main() {
   string str = "forxxorfxdofr";
   string pat = "for";
-  int n = str.length();
-  map<char, int> mp;
-  for (int i = 0; i < n; i++) {
-    mp[str[i]]++;
+  vector<int>ans = solve(str, pat);
+  for(int i = 0; i < ans.size(); i++){
+    cout<<ans[i]<<" ";
   }
-  // print map
-  for (auto &p : mp) {
-    cout << p.first << " " << p.second << endl;
-  }
+
  
   return 0;
 }
