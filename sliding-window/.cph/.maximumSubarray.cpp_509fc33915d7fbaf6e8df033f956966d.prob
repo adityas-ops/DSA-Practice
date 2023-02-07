@@ -1,0 +1,1 @@
+{"name":"Local: maximumSubarray","url":"/Users/ankitsharma/Desktop/DSA-Practice/sliding-window/maximumSubarray.cpp","tests":[{"id":1675768087184,"input":"10 3\n1 2 3 4 5 6 7 8 9 10","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/ankitsharma/Desktop/DSA-Practice/sliding-window/maximumSubarray.cpp","group":"local","local":true}
