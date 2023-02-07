@@ -1,0 +1,22 @@
+function (vector<int>arr, int k){
+    int i = 0;
+    int j = 0;
+    int temp = 0;
+    int maxi = INT_MIN;
+    while(j<arr.size()){
+        do some calculation
+       if(condition > k){
+        while(condition > k){
+            remove calculation for i 
+            i++;
+        }
+}
+else if(condition == k){
+    answer <- calculation 
+    j++;
+}
+else{
+    j++;
+}
+    
+}
