@@ -1,21 +1,25 @@
-#include <iostream>
-#include <map>
+#include<iostream>
+#include<unordered_map>
+#include<string.h>
 using namespace std;
 
-int main() {
-  string s1 = "earth";
-  string s2 = "heart";
-  map<char, int> mp1;
-  map<char, int> mp2;
-  for (int i = 0; i < s1.length(); i++) {
-    mp1[s1[i]]++;
-  }
-  for (int i = 0; i < s2.length(); i++) {
-    mp2[s2[i]]++;
-  }
-  if (mp1 == mp2) {
-    cout << "Anagram" << endl;
-  } else {
-    cout << "Not Anagram" << endl;
-  }
+
+void mapOccur(string s){
+    unordered_map<char,int>mp;
+    for(int i = 0; i<s.size();i++){
+        mp[s[i]]++;
+    }
+    int ans = 0;
+    char a;
+    for(auto x:mp){
+        ans = max(ans,x.second);
+        a = x.first;
+    }
+    cout<<a<<" -> "<<ans<<endl;
+}
+
+
+int main(){
+  string s = "aditya";
+ mapOccur(s);
 }

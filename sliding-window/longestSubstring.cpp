@@ -11,7 +11,7 @@ using namespace std;
 
 
 // this is my method where i use some function of string and an function which give me unique number
-// this solution may fail in some case 
+// this solution may fail in some case
 int checkUnique(string s){
     int count = 0;
     int arr[26] = {0};
