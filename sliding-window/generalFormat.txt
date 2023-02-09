@@ -7,7 +7,7 @@ function (vector<int>arr, int k){
         do some calculation
        if(condition > k){
         while(condition > k){
-            remove calculation for i 
+            remove calculation for i
             i++;
         }
 }
