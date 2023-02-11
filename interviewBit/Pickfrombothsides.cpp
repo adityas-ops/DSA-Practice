@@ -26,6 +26,12 @@ int solve(vector<int>a,int b){
     }
     return ans;
 }
+// using sliding windows method 
+int solve1(vector<int>&a,int b){
+    
+}
+
+
 
 int main(){
 
