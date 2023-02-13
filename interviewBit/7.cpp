@@ -8,17 +8,6 @@
 using namespace std;
 
 
-int Maxim1(vector<int>arr){
-    int n = arr.size();
-    int maxi = INT_MIN;
-    int mini = INT_MAX;
-    for(int i = 0;i<n;i++){
-        maxi = max(maxi,arr[i]+i);
-        mini = min(mini,arr[i]+i);
-    }
-    return maxi-mini;
-}
-
 int Maxim(vector<int>arr){
     int n = arr.size();
     int maxi = INT_MIN;
@@ -38,7 +27,7 @@ int main(){
     int arr[] = {1,3,-1};
     int n = sizeof(arr)/sizeof(arr[0]);
     vector<int>a(arr,arr+n);
-    cout<<Maxim1(a)<<endl;
+    cout<<Maxim(a)<<endl;
     return 0;
 
 }
