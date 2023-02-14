@@ -13,16 +13,14 @@ void printS(string s, int k){
         // use sliding method 
      if(j-i+1 < k){
             j++;
-     }
-        else if(j-i+1 == k){
+     }else if(j-i+1 == k){
             // print the subarray
             for(int x = i; x<=j; x++){
                 cout<<s[x];
             }
             cout<<endl;
             j++;
-        }
-        else if(j-i+1 > k){
+        }else if(j-i+1 > k){
             i++;
         }
     }
