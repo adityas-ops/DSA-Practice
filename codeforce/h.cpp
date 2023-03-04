@@ -22,8 +22,7 @@ fast
 int t=1;
 cin>>t;
 while(t--){
-    cout<<"hello aditya"<<endl;
+int n;
 }
 return 0;
 }
-
