@@ -4,11 +4,12 @@ intput 123
 output 321
 
 */
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
  int reverseInt(int n){
       long r=0;      // decleare r 
+      int x = n;
         while(x){
          r=r*10+x%10; // find remainder and add its to r
          x=x/10;     // Update the value of x
